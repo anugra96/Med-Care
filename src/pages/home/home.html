@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Welcome to MedWare!</h2>
+  <p>
+    Use this application as either a nurse or a patient. As a nurse, get instant notifications when a patient needs your
+    help. As a patient, have instant access to all nurses when you need something.
+  </p>
+
+</ion-content>
+
+<ion-content class="cards-bg">
+
+  <ion-card>
+
+    <button (click) = "PatientNeeds()">
+      <img src="http://zephyrsleep.com/wp-content/uploads/2014/05/PATIENT-Banner-e1401388366852.jpg"/>
+      </button>
+
+    <ion-card-content>
+      <ion-card-title>
+        Patient Access
+      </ion-card-title>
+      <p>
+        Notify nurses of your needs.
+      </p>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <div>
+      <button (click)="NurseControl()">
+        <img src="http://www.businessnewsdaily.com/images/i/000/003/707/original/shutterstock_110038883.jpg?1362591248"/>
+    </button>
+    </div>
+
+    <ion-card-content>
+      <ion-card-title>
+        Nurse Access
+      </ion-card-title>
+      <p>
+        Keep track of the needs of your patients.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+</ion-content>

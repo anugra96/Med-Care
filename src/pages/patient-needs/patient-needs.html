@@ -7,30 +7,40 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>PatientNeeds</ion-title>
+    <ion-title>What Do You Need?</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="add">
   <ion-grid>
 
     <ion-row>
       <ion-col width-50>
-        <img src="patient-icons/water.png">
+        <button (click) = save()>
+          <ion-input type="text" [(ngModel)] = "todoItem"> Water to John Doe on bed 2 </ion-input>
+        <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16808562_1542369315790810_2013390548_n.jpg?oh=b6457b927b3668034a703524f3ea330b&oe=58AB305B"
+             style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; " >
+        </button>
       </ion-col>
       <ion-col width-50>
-        <img src="patient-icons/food.png" >
+        <button (click) = save()>
+          <ion-input type="text" [(ngModel)] = "todoItem"> Water to John Doe on bed 2 </ion-input>
+        <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16809789_1542369325790809_1173802291_n.jpg?oh=0010d01886d851aa7dd6cfa3dde21f00&oe=58AA40FF"
+             style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; ">
+          </button>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col width-50>
-        <img src="patient-icons/medication.png">
+        <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16830246_1542369322457476_1969086852_n.jpg?oh=c0fca950190cbf9af4cc193583f76b20&oe=58AB49D7"
+             style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; ">
       </ion-col>
       <ion-col width-50>
-        <img src="patient-icons/pain.png">
+        <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16808516_1542369319124143_76958400_n.jpg?oh=62365dc79d4d01fe632ee3c39eee8569&oe=58AA69E2"
+             style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; ">
       </ion-col>
     </ion-row>
 
@@ -38,22 +48,16 @@
 
     <ion-row>
       <ion-col width-50>
-        <img src="http://www.psdgraphics.com/file/water-droplet-icon.jpg">
+        <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16809663_1336978036361805_272133154_n.png?oh=b00636c9949869427937a601a01618c7&oe=58AB559D"
+             style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; ">
       </ion-col>
-      <ion-col>
-        <img src="http://www.psdgraphics.com/file/water-droplet-icon.jpg">
-      </ion-col>
-    </ion-row>
-
-
-    <ion-row>
       <ion-col width-50>
-        <img src="http://www.psdgraphics.com/file/water-droplet-icon.jpg">
-      </ion-col>
-      <ion-col>
-        <img src="http://www.psdgraphics.com/file/water-droplet-icon.jpg">
+        <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16831695_1336978039695138_1932999975_n.png?oh=bc3a92ebb2042f3fb2d28ff208af5948&oe=58AB3B7A"
+             style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; ">
       </ion-col>
     </ion-row>
+
+
 
   </ion-grid>
 </ion-content>

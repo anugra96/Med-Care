@@ -7,22 +7,24 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>NurseControl</ion-title>
+    <ion-title>Patient Tasks</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="todos">
   <ion-list>
-    <ion-item>
-      <ion-thumbnail item-left>
-        <img src="img/thumbnail-totoro.png">
-      </ion-thumbnail>
-      <h2>My Neighbor Totoro</h2>
-      <p>Hayao Miyazaki • 1988</p>
-      <button ion-button clear item-right>View</button>
-    </ion-item>
+    <ion-item-sliding *ngFor="let todo of todoList; let i = index">
+      <ion-item>
+        <h2>{{ todo }}</h2>
+      </ion-item>
+      <ion-item-options>
+        <button danger (click)="delete(i)">
+          <ion-icon name="trash"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
-
 </ion-content>

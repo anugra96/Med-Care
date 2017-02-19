@@ -1,22 +1,30 @@
+import {NavController} from 'ionic-angular';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
 
-/*
-  Generated class for the PatientNeeds page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
-  selector: 'page-patient-needs',
+  selector: 'patient-needs',
   templateUrl: 'patient-needs.html'
 })
+
 export class PatientNeedsPage {
+  public todoList: Array<string>;
+  public todoItem: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PatientNeedsPage');
+  constructor(private nav: NavController){
+    this.todoList = JSON.parse(localStorage.getItem("nurse-control"));
+    if (!this.todoList) {
+      this.todoList = [];
+    }
+    this.todoItem = "";
   }
 
+  save() {
+    if (this.todoItem != "") {
+      this.todoList.push(this.todoItem);
+      localStorage.setItem("nurse-control", JSON.stringify(this.todoList));
+      this.nav.pop();
+    }
+  }
 }
+

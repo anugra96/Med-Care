@@ -4,8 +4,8 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
-import { NurseControlPage } from '../pages/nurse-control/nurse-control';
-import { PatientNeedsPage } from '../pages/patient-needs/patient-needs';
+import {NurseControlPage} from '../pages/nurse-control/nurse-control';
+import {PatientNeedsPage} from '../pages/patient-needs/patient-needs';
 
 
 
@@ -32,4 +32,5 @@ import { PatientNeedsPage } from '../pages/patient-needs/patient-needs';
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
-export class AppModule {}
+export class AppModule {
+}

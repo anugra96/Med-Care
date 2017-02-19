@@ -17,10 +17,6 @@ export class NurseControlPage {
 
     this.patient_need = navParams.get('need');
     this.addNeed(this.patient_need);
-    
-    
-
-
 
   }
 

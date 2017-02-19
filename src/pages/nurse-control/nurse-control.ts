@@ -1,6 +1,5 @@
-import {NavController} from 'ionic-angular';
+import {NavController, NavParams, AlertController} from 'ionic-angular';
 import { Component } from '@angular/core';
-import {PatientNeedsPage} from "../patient-needs/patient-needs";
 
 @Component({
   selector: 'nurse-control',
@@ -8,30 +7,33 @@ import {PatientNeedsPage} from "../patient-needs/patient-needs";
 })
 
 export class NurseControlPage {
-  public todoList: Array<string>
+  patient_need: string;
+  needs: any = [];
 
-  constructor(private nav: NavController) {}
 
-  onPageDidEnter() {
-    this.todoList = JSON.parse(localStorage.getItem("nurse-control"));
-    if (!this.todoList) {
-      this.todoList = [];
+  constructor(public navCtrl: NavController,private navParams: NavParams) {
+
+    this.patient_need = navParams.get('need');
+    this.addNeed(this.patient_need);
+
+
+
+  }
+
+
+  addNeed(need) {
+    this.needs.push(need);
+  }
+
+
+  deleteNeed(need){
+    let index = this.needs.indexOf(need);
+
+    if (index > -1) {
+      this.needs.splice(index, 1);
+
     }
   }
 
-  delete(index: number) {
-    this.todoList.splice(index, 1);
-    localStorage.setItem("todos", JSON.stringify(this.todoList));
-  }
-
-  add() {
-    this.nav.push(PatientNeedsPage);
-  }
 }
 
-/*
- Generated class for the Todos page.
-
- See http://ionicframework.com/docs/v2/components/#navigation for more info on
- Ionic pages and navigation.
- */

@@ -1,5 +1,8 @@
 import {NavController} from 'ionic-angular';
 import { Component } from '@angular/core';
+import { AlertController } from 'ionic-angular';
+
+
 
 @Component({
   selector: 'patient-needs',
@@ -7,24 +10,17 @@ import { Component } from '@angular/core';
 })
 
 export class PatientNeedsPage {
-  public todoList: Array<string>;
-  public todoItem: string;
 
 
-  constructor(private nav: NavController){
-    this.todoList = JSON.parse(localStorage.getItem("nurse-control"));
-    if (!this.todoList) {
-      this.todoList = [];
-    }
-    this.todoItem = "";
-  }
+  constructor(private navController: NavController,public alertCtrl: AlertController){}
 
-  save() {
-    if (this.todoItem != "") {
-      this.todoList.push(this.todoItem);
-      localStorage.setItem("nurse-control", JSON.stringify(this.todoList));
-      this.nav.pop();
-    }
+  AllAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'SENT',
+      subTitle: 'We will be right with you!',
+    });
+    alert.present();
   }
 }
+
 

@@ -7,24 +7,93 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Patient Tasks</ion-title>
+    <ion-title>Patient Notifications</ion-title>
   </ion-navbar>
 
 </ion-header>
 
+<ion-content>
 
-<ion-content class="todos">
+
+
   <ion-list>
-    <ion-item-sliding *ngFor="let todo of todoList; let i = index">
+    <ion-item-sliding>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16808562_1542369315790810_2013390548_n.jpg?oh=b6457b927b3668034a703524f3ea330b&oe=58AB305B">
+      </ion-avatar>
+      <h2>John Doe - Room 2 - WATER </h2>
+    </ion-item>
+    <ion-item-options side="left">
+      <button ion-button color="danger">
+        DELETE
+      </button>
+    </ion-item-options>
+    <ion-item-options side="right">
+      <button ion-button color="primary">
+        QR CODE
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+
+
+    <ion-item-sliding>
       <ion-item>
-        <h2>{{ todo }}</h2>
+        <ion-avatar item-left>
+          <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16809789_1542369325790809_1173802291_n.jpg?oh=0010d01886d851aa7dd6cfa3dde21f00&oe=58AA40FF">
+        </ion-avatar>
+        <h2>John Doe - Room 2 - FOOD </h2>
       </ion-item>
-      <ion-item-options>
-        <button danger (click)="delete(i)">
-          <ion-icon name="trash"></ion-icon>
-          Delete
+      <ion-item-options side="left">
+        <button ion-button color="danger">
+          DELETE
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          QR CODE
         </button>
       </ion-item-options>
     </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16830246_1542369322457476_1969086852_n.jpg?oh=c0fca950190cbf9af4cc193583f76b20&oe=58AB49D7">
+        </ion-avatar>
+        <h2>John Doe - Room 2 - NURSE </h2>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="danger">
+          DELETE
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          QR CODE
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16808516_1542369319124143_76958400_n.jpg?oh=62365dc79d4d01fe632ee3c39eee8569&oe=58AA69E2">
+        </ion-avatar>
+        <h2>John Doe - Room 2 - MEDICATION </h2>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="danger">
+          DELETE
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          QR CODE
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
   </ion-list>
+
 </ion-content>

@@ -13,37 +13,43 @@
 </ion-header>
 
 
+
 <ion-content padding class="add">
+
+  <p>
+    <button ion-button large color="danger" full>EMERGENCY</button>
+  </p>
   <ion-grid>
 
     <ion-row>
       <ion-col width-50>
-        <button (click) = save()>
-          <ion-input type="text" [(ngModel)] = "todoItem"> Water to John Doe on bed 2 </ion-input>
-        <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16808562_1542369315790810_2013390548_n.jpg?oh=b6457b927b3668034a703524f3ea330b&oe=58AB305B"
-             style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; " >
+        <button (click)="AllAlert()">
+            <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16808562_1542369315790810_2013390548_n.jpg?oh=b6457b927b3668034a703524f3ea330b&oe=58AB305B"
+              style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; " >
         </button>
       </ion-col>
       <ion-col width-50>
-        <button (click) = save()>
-          <ion-input type="text" [(ngModel)] = "todoItem"> Water to John Doe on bed 2 </ion-input>
+        <button (click)="AllAlert()">
         <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16809789_1542369325790809_1173802291_n.jpg?oh=0010d01886d851aa7dd6cfa3dde21f00&oe=58AA40FF"
              style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; ">
-          </button>
+        </button>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col width-50>
-        <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16830246_1542369322457476_1969086852_n.jpg?oh=c0fca950190cbf9af4cc193583f76b20&oe=58AB49D7"
-             style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; ">
+        <button (click)="AllAlert()">
+            <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16830246_1542369322457476_1969086852_n.jpg?oh=c0fca950190cbf9af4cc193583f76b20&oe=58AB49D7"
+              style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; ">
+        </button>
       </ion-col>
       <ion-col width-50>
-        <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16808516_1542369319124143_76958400_n.jpg?oh=62365dc79d4d01fe632ee3c39eee8569&oe=58AA69E2"
-             style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; ">
+        <button (click)="AllAlert()">
+            <img src="https://scontent.xx.fbcdn.net/v/t34.0-12/16808516_1542369319124143_76958400_n.jpg?oh=62365dc79d4d01fe632ee3c39eee8569&oe=58AA69E2"
+              style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; ">
+        </button>
       </ion-col>
     </ion-row>
-
 
 
     <ion-row>
@@ -56,8 +62,6 @@
              style="border: #000000 3px outset; width: 400px; display: block; margin-left: auto; ">
       </ion-col>
     </ion-row>
-
-
-
   </ion-grid>
+
 </ion-content>
